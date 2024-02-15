@@ -1,4 +1,6 @@
 ﻿using Application.Contracts;
+using AutoMapper;
+using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +18,10 @@ namespace Application.Features.Posts.Queries.GetPostList
             _postRepository=postRepository;
             _mapper=mapper;
         }
-        public async Task <List<GetPostListViewModel>>
+        public async Task <List<GetPostListViewModel>>  Handle(GetPostListQuery request, CancellationToken cancellationToken)
+        {
+            var allpost = await _postRepository.GetAllPostsAsync(true);
+            return _mapper.Map<List<GetPostListViewModel>>(allpost);
+        }
     }
 }
