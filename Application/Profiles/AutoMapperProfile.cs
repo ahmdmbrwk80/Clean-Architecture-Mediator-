@@ -1,4 +1,5 @@
-﻿using Application.Features.Posts.Queries.GetPostList;
+﻿using Application.Features.Posts.Commands.CreatePost;
+using Application.Features.Posts.Queries.GetPostList;
 using AutoMapper;
 using Domain_Model;
 using PostLand.Application.Features.Posts.Queries.GetPostDetail;
@@ -14,8 +15,9 @@ namespace Application.Profiles
     {
         public AutoMapperProfile()
         {
-            CreateMap<Post,GetPostListViewModel>().ReverseMap(); 
-            CreateMap<Post,GetPostDetailViewModel>().ReverseMap();
+            CreateMap<Post, GetPostListViewModel>().ReverseMap();
+            CreateMap<Post, GetPostDetailViewModel>().ReverseMap();
+            CreateMap<Post, CreatePostCommand>().ReverseMap();
 
         }
     }

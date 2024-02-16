@@ -11,8 +11,8 @@ namespace Application.Contracts
         Task<T> GetByIdAsync(Guid id);
         Task<IReadOnlyList<T>> ListAllAsync();
         Task<T> AddAsync(T entity);
-        Task<T> UppdateAsync(T entity);
-        Task<T> DeleteAsync(T entity);
+        Task UppdateAsync(T entity);
+        Task DeleteAsync(T entity);
 
     }
 }
