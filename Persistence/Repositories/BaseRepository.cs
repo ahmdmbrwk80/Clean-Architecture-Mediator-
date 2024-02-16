@@ -6,7 +6,6 @@ namespace Persistence
     public partial class BaseRepository<T> : IAsyncRepository<T> where T : class
     {
         protected readonly ApplicationDbContext _dbContext;
-
         public BaseRepository(ApplicationDbContext dbContext)
         {
             _dbContext = dbContext;
@@ -42,7 +41,6 @@ namespace Persistence
             await _dbContext.SaveChangesAsync();
         }
 
-     
     }
 
 }

@@ -17,10 +17,8 @@ namespace Application.Features.Posts.Commands.CreatePost
 
         public CreatePostCommandHandler(IPostRepository postRepository, IMapper mapper)
         {
-
             _postRepository = postRepository;
             _mapper = mapper;
-
         }
         public async Task<Guid> Handle(CreatePostCommand request, CancellationToken cancellationToken)
         {

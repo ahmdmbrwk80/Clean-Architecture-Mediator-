@@ -5,7 +5,6 @@ using Application.Features.Posts.Queries.GetPostDetail;
 using Application.Features.Posts.Queries.GetPostList;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using PostLand.Application.Features.Posts.Queries.GetPostDetail;
 
 namespace Api.Controllers
 {
@@ -14,7 +13,6 @@ namespace Api.Controllers
     public class PostController : ControllerBase
     {
         private readonly IMediator _mediator;
-
         public PostController(IMediator mediator)
         {
             _mediator = mediator;
@@ -55,6 +53,5 @@ namespace Api.Controllers
             await _mediator.Send(deletePostCommand);
             return NoContent();
         }
-
     }
 }

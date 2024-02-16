@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using PostLand.Application.Features.Posts.Queries.GetPostDetail;
+using Application.Features.Posts.Queries.GetPostDetail;
 using System;
 
 namespace Application.Features.Posts.Queries.GetPostDetail

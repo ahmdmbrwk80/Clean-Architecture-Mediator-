@@ -12,8 +12,7 @@ namespace Domain_Model
         public string Title { get; set; } = string.Empty;
         public string ImageUrl { get; set; } = string.Empty;
         public string Content { get; set; } = string.Empty;
-        public Category category { get; set; }
+        public Category? category { get; set; }
         public Guid ctaegoryID { get; set; }
-
     }
 }

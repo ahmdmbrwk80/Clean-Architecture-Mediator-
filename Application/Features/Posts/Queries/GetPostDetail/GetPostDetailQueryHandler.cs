@@ -3,7 +3,7 @@ using MediatR;
 using Application.Features.Posts.Queries.GetPostDetail;
 using Application.Contracts;
 
-namespace PostLand.Application.Features.Posts.Queries.GetPostDetail
+namespace Application.Features.Posts.Queries.GetPostDetail
 {
     public class GetPostDetailQueryHandler : IRequestHandler<GetPostDetailQuery, GetPostDetailViewModel>
     {

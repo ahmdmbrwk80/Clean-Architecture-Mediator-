@@ -17,7 +17,6 @@ namespace Application.Features.Posts.Commands.DeletePost
         public DeletePostCommandHandler(IPostRepository postRepository)
         {
             _postRepository = postRepository;
-
         }
         public async Task<Unit> Handle(DeletePostCommand request, CancellationToken cancellationToken)
         {

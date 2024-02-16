@@ -13,6 +13,7 @@ namespace Persistence
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
           : base(options)
         {
+
         }
 
         public DbSet<Post> Posts { get; set; }
@@ -21,6 +22,7 @@ namespace Persistence
         {
             var categoryGuid = Guid.Parse("{B0788D2F-8003-43C1-92A4-EDC76A7C5DDE}");
             var postGuid = Guid.Parse("{6313179F-7837-473A-A4D5-A5571B43E6A6}");
+
             modelBuilder.Entity<Category>().HasData(new Category
             {
                 Id = categoryGuid,
@@ -35,8 +37,6 @@ namespace Persistence
                 ImageUrl = "https://api.khalidessaadani.com/uploads/articles_bg.jpg",
                 ctaegoryID = categoryGuid
             });
-
         }
-
     }
 }

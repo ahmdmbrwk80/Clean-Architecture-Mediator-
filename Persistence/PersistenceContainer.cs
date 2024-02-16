@@ -7,7 +7,8 @@ namespace Persistence
 {
     public static class PersistenceContainer
     {
-        public static IServiceCollection AddPersistenceServices(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddPersistenceServices(
+                     this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("PostConnectionString")));
@@ -18,5 +19,4 @@ namespace Persistence
             return services;
         }
     }
-
 }

@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace Application.Features.Posts.Queries.GetPostList
 {
-    public class GetPostListQuery :IRequest<List<GetPostListViewModel>>
+    public class GetPostListQuery : IRequest<List<GetPostListViewModel>>
     {
+
     }
 }
